@@ -2,6 +2,7 @@ const express = require("express");
 
 const aboutRoute = require("./about");
 const productsRoute = require("./products");
+
 const router = express.Router();
 
 module.exports = () => {
@@ -12,6 +13,7 @@ module.exports = () => {
     response.send("hello prasanth  from express ;)");
   });
   router.use("/about", aboutRoute());
+  // router.use("/upload", uploadRoute());
   router.use("/products", productsRoute());
   return router;
 };
